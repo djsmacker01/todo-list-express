@@ -65,6 +65,7 @@ app.put('/markComplete', (request, response) => {
     db.collection('todos').updateOne({thing: request.body.itemFromJS},{
         $set: {
             completed: true
+            
           }
     },{
         sort: {_id: -1},// Sort the documents in descending order by _id
