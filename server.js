@@ -1,11 +1,16 @@
 // import the express library 
 const express = require('express')
+//  Create an instance of an Express application
 const app = express()
+// Import the MongoClient from the MongoDB library
 const MongoClient = require('mongodb').MongoClient
+// define the port
 const PORT = 2121
+
+// Load environment variables from a .env file into process.env
 require('dotenv').config()
 
-
+// Declare variables for the database connection and name
 let db,
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'todo'
