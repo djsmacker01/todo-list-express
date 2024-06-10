@@ -20,7 +20,9 @@ Array.from(itemCompleted).forEach((element)=>{
     element.addEventListener('click', markUnComplete)
 })
 
-async function deleteItem(){
+// function to delete item
+async function deleteItem() {
+    //get the text of the item to be deleted
     const itemText = this.parentNode.childNodes[1].innerText
     try{
         const response = await fetch('deleteItem', {
@@ -38,6 +40,7 @@ async function deleteItem(){
         console.log(err)
     }
 }
+
 
 async function markComplete(){
     const itemText = this.parentNode.childNodes[1].innerText
