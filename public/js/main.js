@@ -24,7 +24,8 @@ Array.from(itemCompleted).forEach((element)=>{
 async function deleteItem() {
     //get the text of the item to be deleted
     const itemText = this.parentNode.childNodes[1].innerText
-    try{
+    try {
+        // send a delete request to the server with the text item
         const response = await fetch('deleteItem', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
@@ -34,7 +35,7 @@ async function deleteItem() {
           })
         const data = await response.json()
         console.log(data)
-        location.reload()
+        location.reload() // reload the page to update the list of items
 
     }catch(err){
         console.log(err)
