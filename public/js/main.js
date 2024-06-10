@@ -1,5 +1,8 @@
+// store all element with fa-trash to deleteBtn variable
 const deleteBtn = document.querySelectorAll('.fa-trash')
+// store all element with .item span to item variable
 const item = document.querySelectorAll('.item span')
+// store all element with .item span.complete to itemCompleted  variable
 const itemCompleted = document.querySelectorAll('.item span.completed')
 
 Array.from(deleteBtn).forEach((element)=>{
