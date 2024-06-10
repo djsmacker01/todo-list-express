@@ -42,8 +42,9 @@ async function deleteItem() {
     }
 }
 
-
-async function markComplete(){
+// function to mark an item complete
+async function markComplete() {
+    //get the text of the item to be marked as complete
     const itemText = this.parentNode.childNodes[1].innerText
     try{
         const response = await fetch('markComplete', {
@@ -55,14 +56,16 @@ async function markComplete(){
           })
         const data = await response.json()
         console.log(data)
-        location.reload()
+        location.reload() // Reload the page to update the list
 
     }catch(err){
         console.log(err)
     }
 }
 
-async function markUnComplete(){
+// function to mark an item incomplete
+async function markUnComplete() {
+    // get the ext of item to be mark as incomplete
     const itemText = this.parentNode.childNodes[1].innerText
     try{
         const response = await fetch('markUnComplete', {
@@ -74,7 +77,7 @@ async function markUnComplete(){
           })
         const data = await response.json()
         console.log(data)
-        location.reload()
+        location.reload() // reload the page to update the list
 
     }catch(err){
         console.log(err)
