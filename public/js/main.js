@@ -5,14 +5,17 @@ const item = document.querySelectorAll('.item span')
 // store all element with .item span.complete to itemCompleted  variable
 const itemCompleted = document.querySelectorAll('.item span.completed')
 
+
+// adding event listeners to each delete button
 Array.from(deleteBtn).forEach((element)=>{
     element.addEventListener('click', deleteItem)
 })
-
+// adding event listeners to each item span
 Array.from(item).forEach((element)=>{
     element.addEventListener('click', markComplete)
 })
 
+// adding event listeners to each itemCompleted
 Array.from(itemCompleted).forEach((element)=>{
     element.addEventListener('click', markUnComplete)
 })
