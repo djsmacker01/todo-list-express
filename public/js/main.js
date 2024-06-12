@@ -12,7 +12,7 @@ Array.from(deleteBtn).forEach((element)=>{
 })
 // adding event listeners to each item span
 Array.from(item).forEach((element)=>{
-    // element.addEventListener('click', markComplete)
+    element.addEventListener('click', markComplete)
 })
 
 // adding event listeners to each itemCompleted
