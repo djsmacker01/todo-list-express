@@ -59,7 +59,7 @@ async function markComplete() {
         location.reload() // Reload the page to update the list
 
     }catch(err){
-        // console.log(err)
+        console.log(err)
     }
 }
 
