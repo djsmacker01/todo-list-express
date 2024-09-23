@@ -55,7 +55,7 @@ async function markComplete() {
             })
           })
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         location.reload() // Reload the page to update the list
 
     }catch(err){
